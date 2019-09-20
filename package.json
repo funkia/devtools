@@ -1,0 +1,22 @@
+{
+  "name": "@funkia/devtools",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@funkia/hareactive": "^0.3.4",
+    "@funkia/io": "0.0.5",
+    "@funkia/turbine": "^0.4.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.23.0-module.beta.1",
+    "typescript": "^3.6.2"
+  }
+}

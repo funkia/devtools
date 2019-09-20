@@ -1,0 +1,85 @@
+$width: 20em;
+$padding: 1em;
+
+.hide {
+  display: none;
+}
+
+.container {
+  position: fixed;
+  right: 0;
+  transition: right 300ms ease;
+  &.hide-panel {
+    right: -($width + 2 * $padding);
+  }
+  display: flex;
+  flex-direction: row;
+
+  .toggle-btn {
+    width: 0.8em;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 10px 0px 0px 10px;
+    &:hover {
+      background-color: darken(grey, 10%);
+    }
+  }
+
+  .panel {
+    border: 1px solid gray;
+    border-right: 0;
+    background-color: whitesmoke;
+    width: $width;
+    padding: $padding;
+    padding-top: 0;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .reactive-view {
+      display: flex;
+      align-items: center;
+      .reactive-desc {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 1em;
+      }
+      .reactive-type {
+        margin-right: 0.5em;
+      }
+      .checkbox-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.5em;
+      }
+      $radius: 5px;
+      .send-input-container {
+        display: flex;
+        .send-input {
+          width: 50px;
+          border-radius: $radius 0 0 $radius;
+          border: 1px solid gray;
+          border-right: 0;
+
+          text-align: center;
+        }
+        .send-btn {
+          border: 1px solid gray;
+          border-radius: 0 $radius $radius 0;
+          padding: 1px;
+          font-size: 24px;
+          cursor: pointer;
+          &:hover {
+            background-color: grey;
+          }
+        }
+        .send-input,
+        .send-btn {
+          height: 36px;
+        }
+      }
+    }
+  }
+}
